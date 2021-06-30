@@ -1,1 +1,21 @@
 por ahora solo esto.
+
+
+
+Semana 6:
+
+  Comandos para ver datos de la memoria:
+  sudo dmidecode --type 17
+  cat/proc/meminfo
+
+  Comando 1
+  for file in /proc/*/status ; do awk '/VmSwap|Name/{printf $2 " " $3}END{ print ""}' $file; done | sort -k 2 -n -r | less
+
+# Comando 2
+  free -h
+
+# Comando 3
+  swapon
+
+# Comando 4 Swampiness
+  cat /proc/sys/vm/swappiness
