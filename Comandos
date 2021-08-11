@@ -1,14 +1,43 @@
-por ahora solo esto.
+# Curso de Sistemas Operativos
+# Estudiante Emily Obando Vargas
+# En este repo se sumarizan los comandos aprendidos divididos por las clases donde se aprendieron
 
 
 
-Semana 6:
+# Semana 2:
 
-  Comandos para ver datos de la memoria:
+# Para ver ruta en la que se encuentra
+  pwd
+
+# Actualizar repositorios 
+  apt-get update
+
+# Dar permisos de super usuario a cualquier comando
+  sudo
+
+# Instalar software desde repositorios
+  apt install
+
+# Limpiar terminal
+  clear
+
+# Revisar posibilidades de comandos o software
+  apt search
+
+
+# Semana 3:
+# Semana 4:
+# Semana 5:
+
+
+
+# Semana 6:
+
+# Ver datos de la memoria:
   sudo dmidecode --type 17
   cat/proc/meminfo
 
-  Comando 1
+# Comando 1
   for file in /proc/*/status ; do awk '/VmSwap|Name/{printf $2 " " $3}END{ print ""}' $file; done | sort -k 2 -n -r | less
 
 # Comando 2
@@ -19,3 +48,61 @@ Semana 6:
 
 # Comando 4 Swampiness
   cat /proc/sys/vm/swappiness
+  
+  
+# Semana 7:
+
+# Ver tamaño de archivo
+  du -h archivo.png
+
+# Ver fecha de creación, último acceso
+  stat archivo.png
+
+# Tipo de archivo
+  file archivo.png
+  
+# Propietario y grupo, lista de permisos. Cambio de propietario, otorgar permisos.
+  chown user1 archivo.png
+  chmod 777 archivo.png 
+  
+# Mostrar el espacio en disco usado  
+  df -h
+  
+# Mount: Montaje de dispositivos en el sistema de archivos
+  /etc/fstab 
+  mount /dev/cdrom /mnt
+
+# Gparted: Administra las particiones
+  sudo apt install gparted
+  
+# gnome-disk-utility: Muestra información sobre el disco
+  sudo apt install 
+
+# Matar un proceso
+  kill -9 $PID
+ 
+# Mostrar los procesos 
+  ps -aux
+  
+  
+  
+# Semana 8:
+
+# Ver version de bash
+  bash --version
+
+# Ver ubicación de los intérpretes 
+  echo $SHELL
+
+# Ver todos los shells
+  cat /etc/shells
+ 
+# Cambiar bash
+  chsh -s /bin/zsh 
+to ksh ##
+
+
+# Semana 9:
+# Semana 10:
+# Semana 11:
+# Semana 12:
