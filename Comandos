@@ -17,6 +17,7 @@
 
 # Instalar software desde repositorios
   apt install
+  snap  ** tambien se puede usar
 
 # Limpiar terminal
   clear
@@ -26,6 +27,65 @@
 
 
 # Semana 3:
+
+# Ver datos de red
+ip addr
+
+# Ver IP de maquina
+nmap [IP]
+
+# Hacer ping de alguna maquina
+ping [IP]
+
+# Crear diirectorios
+mkdir
+
+# Ver procesos, con parametro -aux se ven procesos activos. 
+# Con top se ven procesos en tiempo real, es mas interactivo. 
+ps -aux
+top
+pstree
+htop **debe instalarse
+
+# concatenar comandos
+|
+
+# Buscar 
+grep [nombre]
+
+# Matar procesos
+kill -9 [nombre]
+
+# Ver que usuario esta usnando el sistema
+whoami
+
+# Entrar como super usuario root
+sudo su
+sudo -i
+su root
+
+# Establecer contraseñas
+sudo passwd [usuario]
+
+# Crear archivos 
+touch
+
+# Editar archivos de texto
+vim
+nano
+
+# Enlistar lo que contiene el directorio actual
+ls -l
+
+# Mostrar contenido del archivo
+cat 
+more
+less
+
+# Ver usuarios y datos
+cat /etc/passwd
+
+
 # Semana 4:
 # Semana 5:
 
@@ -37,19 +97,27 @@
   sudo dmidecode --type 17
   cat/proc/meminfo
 
-# Comando 1
+# Comando para recorrer procesos actuales y leer cuantos KB/s usa cada uno.
   for file in /proc/*/status ; do awk '/VmSwap|Name/{printf $2 " " $3}END{ print ""}' $file; done | sort -k 2 -n -r | less
 
-# Comando 2
+# Comando para leer memoria disponible
   free -h
 
-# Comando 3
+# Comando para dar prioridad a la memoria swap
   swapon
 
-# Comando 4 Swampiness
+# Comando Swampiness: editar # de cuanto porcentaje de memoria usa en RAM 
   cat /proc/sys/vm/swappiness
   
-  
+# Crear un disco de memoria RAM
+sudo mkdir /mnt/ram_disk
+
+# Montar un sistema de archivos usando RAM
+sudo mount -t tmpfs -o size=1024m new_ram_disk /mnt/ram_disk
+
+# Ver detalles de directorios
+df -h
+
 # Semana 7:
 
 # Ver tamaño de archivo
@@ -81,12 +149,13 @@
 # Matar un proceso
   kill -9 $PID
  
-# Mostrar los procesos 
-  ps -aux
-  
-  
   
 # Semana 8:
+
+
+
+
+# Semana 9:
 
 # Ver version de bash
   bash --version
@@ -94,15 +163,64 @@
 # Ver ubicación de los intérpretes 
   echo $SHELL
 
-# Ver todos los shells
+# Ver todos los shells instalados
   cat /etc/shells
  
-# Cambiar bash
+# Cambiar bash a ksh
   chsh -s /bin/zsh 
-to ksh ##
+
+# Ejecutarlo scripts
+./script.sh
+bash script.sh
+
+# Imprimir
+echo
+
+# Inicio de scripts en bash: shebang
+#!/bin/bash
+
+# Dar permisos de ejecutar a scripts
+chmod +x script.sh
+chmod 755 script.sh
+
+# Declarar variables y asignarles un valor
+NAME=$(hostname)
+
+# Debugg
+~/scripts> bash -x script.sh 
+
+# Instalar paquetes
+dpkg -t [nombre]
+
+#Formato basico de programacion en bash
+if [ condicion ];
+then
+ accion1
+else
+ accion2
+fi
+
+for i in variable
+do
+ accion1 $i
+done
+
+while [ variable ]
+do
+  accion1
+  accion2
+done
+
+function F1()
+{
+accion1
+}
+F1
+
+# Entrada de usuario
+read variable
 
 
-# Semana 9:
 # Semana 10:
 # Semana 11:
 # Semana 12:
