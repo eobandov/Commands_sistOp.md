@@ -4,7 +4,7 @@
 
 
 
-# Semana 2:
+                                                                               # Semana 2:
 
 # Para ver ruta en la que se encuentra
   pwd
@@ -26,7 +26,7 @@
   apt search
 
 
-# Semana 3:
+                                                                               # Semana 3:
 
 # Ver datos de red
 ip addr
@@ -85,13 +85,7 @@ less
 # Ver usuarios y datos
 cat /etc/passwd
 
-
-# Semana 4:
-# Semana 5:
-
-
-
-# Semana 6:
+                                                                          # Semana 6:
 
 # Ver datos de la memoria:
   sudo dmidecode --type 17
@@ -118,7 +112,7 @@ sudo mount -t tmpfs -o size=1024m new_ram_disk /mnt/ram_disk
 # Ver detalles de directorios
 df -h
 
-# Semana 7:
+                                                                              # Semana 7:
 
 # Ver tamaño de archivo
   du -h archivo.png
@@ -155,7 +149,7 @@ df -h
 
 
 
-# Semana 9:
+                                                                               # Semana 9:
 
 # Ver version de bash
   bash --version
@@ -221,6 +215,126 @@ F1
 read variable
 
 
-# Semana 10:
-# Semana 11:
-# Semana 12:
+                                                                         # Semana 10: Docker images
+
+# Servidor de Software
+  docker pull store/gitlab/gitlab-ce:10.2.4-ce.0
+
+# Servidor DHCP
+  docker pull sw4iot/isc-dhcp
+  docker pull gartz/simple-dns
+
+# Servidor SSH, FTP, SAMBA
+  docker pull itsthenetwork/nfs-server-alpine
+  docker pull stanback/alpine-samba
+
+# Servidor FTP y Servidor Web
+  docker pull stilliard/pure-ftpd
+  docker pull inwt/r-shiny
+
+# Servidor de Respaldos
+  docker pull nextcloud
+
+# Servidor Proxy
+  docker pull minimum2scp/squid
+
+# Servidor de Logs
+  docker pull splunk/splunk 
+# Kali Linux
+  docker pull kalilinux/kali-linux-docker
+# Ubuntu
+  docker pull ubuntu
+
+                                                                # Semana 11:
+# Ver contraseñas en linux
+  /etc/passwd
+  /etc/shadow
+  sudo passwd root
+  
+# Ver contraseñas en windows
+  lsadump::sam sam3.hiv system.hiv
+  # revisar editor de registro HKEY LOCAL MACHINE SAM export
+  
+# Cracking Hashes
+  john --show passwords.txt
+  cat hashes.txt
+
+# Ver version de GUI de nmap
+  zenmap
+
+# uso de firewall
+  sudo apt-get install iptables
+  sudo iptables -L -v
+  sudo iptables -A INPUT -p tcp --dport [numero de puerto] ACCEPT
+  sudo iptables -A INPUT -j DROP
+  sudo iptables -A INPUT -s [IP] -j ACCEPT
+  sudo iptables -A INPUT -s [IP] -j DROP
+
+# Descargar ICMP /Broadcast
+/etc/sysctl.conf
+net.ipv4.icmp_echo_ignore_all = 1
+net.ipv4.icmp_echo_ignore_broadcasts = 1
+sysctl -p
+
+# Ejecucion de parches
+sudo apt update / sudo ap upgrade
+sudo pacman -Syuu
+yum -y update
+Windows Update
+
+# Gestion de logs
+/var/log/auth.log
+/var/log/message # Todos los logs disponibles del sistema 
+/var/log/auth.log # logs de autentificacion
+/var/log/kern.log # Logs del Kernel
+/var/log/cron.log # logs de crond 
+/var/log/maillog # logs del correo del servidor
+/var/log/boot.log # Logs de inicio del sistema
+/var/log/mysqld.log # Logs de MySQL 
+/var/log/apache/access.log # Logs de Apache
+/var/log/secure # logs de autentificacion
+/var/log/utmp # registro de inicios de sesion
+/var/log/wtmp 
+/var/log/yum.log # Log de Yum
+
+
+
+# Comandos Manjaro
+
+#Actualizar repositorios
+sudo pacman -Syuu
+
+# Instalar zip
+sudo pacman -S unrar zip unzip p7zip gzip bzip2
+
+# Instalar repositorio AUR
+sudo pacman -S yay
+sudo yay -S --needed base-devel
+
+# Agregar usuarios
+sudo useradd -m nombredeusuario -G wheel -p passworddelusuario
+
+# Eliminar subdirectorios
+rmdir
+
+# Eliminar archivos
+rm
+
+# Ver historial de comandos escritos en la terminal
+history
+
+# Ver número de inodo
+ls -li archivo.txt
+
+# Crear el enlace duro
+ln prueba.txt nuevaRutaArchivo
+
+# Crear enlace simbólico
+ln -s ruta/prueba.txt nuevaRuta/prueba2 
+
+# Para acceder a contrab
+contrab -e
+
+#Así se ve el formato dentro del archivo crontab
+m h dom mon dow user command 
+
