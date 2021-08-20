@@ -346,6 +346,6 @@ m h dom mon dow user command
 ```
 
 
-### Suporte o contacto
+### Soporte o contacto
 
 Teniendo problemas con Paginas? Revisa la documentación [documentation](https://docs.github.com/categories/github-pages-basics/) o [contact support](https://support.github.com/contact) y te ayudaremos a solucionarlo.
