@@ -240,11 +240,68 @@ _Servidor Proxy_
 
 _Servidor de Logs_
   docker pull splunk/splunk 
+  
 _Kali Linux_
   docker pull kalilinux/kali-linux-docker
+  
 _Ubuntu_
   docker pull ubuntu
+  
+_Ver datos de docker_
+sudo docker info
 
+_Ver imagenes descargadas_
+sudo docker images
+
+_Descargar version de ubuntu mas actual_
+sudo docker pull ubuntu:latest
+
+_Para correr imagenes_
+docker run [images name]
+
+_Ver los contenedores que esten UP. Para ver incluso los contenedores que ya terminaron de ejecutar se usa -a_
+docker ps
+docker ps -a
+
+_Correr un contenedor de forma interactiva (i) y abrir su terminal (t). Con el parámetro -v se va a crear un volumen donde se le pone ruta de host y del cliente para que se guarden datos ahi, ya que al borrar contenedores se borran los datos obtenidos._
+docker run -ti ubuntu
+docker run -v /tmp://cosas nginx:alpine ash
+
+_Se puede correr un contenedor y ser borrado apenas se sale_
+docker run -ti --rm [image]
+
+_Comando para correr comandos de fondo_
+docker run -d (contenedor)
+
+_Comando para asignar nombre a contenedor_
+docker run --name (nombre) (contenedor)
+
+_Detener contenedores_
+docker stop (name) (id)
+
+_Borrar contenedores_
+docker rm (name) (id)
+
+_Borrar imagenes_
+docker rmi (name:version) (ID)
+
+_Comando FROM que toma que imagen base está siendo utilizada_
+FROM ubuntu
+
+_Comando RUN para realizar acciones_
+RUN echo "Hola"
+
+_Con el comando ADD se puede agregar archivos tipo fichero cuando se vaya a crear una imagen_
+ADD index.html /var/www/index.html
+
+_Comando ENV para agregar variables_
+ENV variable1= "valor1"
+
+_Ejecutar un comando al arrancar el contenedor. Con CMD se modifica el primer comando que se usará_
+CMD["uname","-a"]
+
+_ Publicar puertos de la imagen: Con EXPOSE se declara que puerto tcp va a estar open para conexión de red. Para poder habilitar el puerto, se entra con el comando run y una variable -p especificando los puertos del host y del contenedor
+EXPOSE 80
 ```
 
 #### Semana 11 🛂 📚
