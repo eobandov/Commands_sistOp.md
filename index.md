@@ -1,4 +1,4 @@
-### Bienvenid@s a mi repositorio sobre comandos aprendidos en el Curso de Sistemas Operativos 🌟
+### Repositorio sobre comandos aprendidos en el Curso de SO 🌟
 
 
 ##### ✨ Hecho por Emily Massielle Obando Vargas ✨
@@ -7,23 +7,23 @@ En este repositorio se sumarizan los comandos aprendidos divididos por las clase
 
 #### Semana 2 🗺️ 🥽
 ```markdown
-**Para ver ruta en la que se encuentra**
+_Para ver ruta en la que se encuentra_
   pwd
 
-**Actualizar repositorios** 
+_Actualizar repositorios_
   apt-get update
 
-**Dar permisos de super usuario a cualquier comando**
+_Dar permisos de super usuario a cualquier comando_
   sudo
 
-**Instalar software desde repositorios**
+_Instalar software desde repositorios_
   apt install
   snap  `tambien se puede usar`
 
-**Limpiar terminal**
+_Limpiar terminal_
   clear
 
-**Revisar posibilidades de comandos o software**
+_Revisar posibilidades de comandos o software_
   apt search
 ```
 
@@ -89,29 +89,29 @@ cat /etc/passwd
 ```
 #### Semana 6 🧠 📑
 ```markdown
-**Ver datos de la memoria**
+_Ver datos de la memoria_
   sudo dmidecode --type 17
   cat/proc/meminfo
 
-**Recorrer procesos actuales y leer cuantos KB/s usa cada uno**
+_Recorrer procesos actuales y leer cuantos KB/s usa cada uno_
   for file in /proc/*/status ; do awk '/VmSwap|Name/{printf $2 " " $3}END{ print ""}' $file; done | sort -k 2 -n -r | less
 
-**Comando para leer memoria disponible**
+_Comando para leer memoria disponible_
   free -h
 
-**Comando para dar prioridad a la memoria swap**
+_Comando para dar prioridad a la memoria swap_
   swapon
 
-**Comando Swampiness: editar # de cuanto porcentaje de memoria usa en RAM**
+_Comando Swampiness: editar # de cuanto porcentaje de memoria usa en RAM_
   cat /proc/sys/vm/swappiness
   
-**Crear un disco de memoria RAM**
+_Crear un disco de memoria RAM_
 sudo mkdir /mnt/ram_disk
 
-**Montar un sistema de archivos usando RAM**
+_Montar un sistema de archivos usando RAM_
 sudo mount -t tmpfs -o size=1024m new_ram_disk /mnt/ram_disk
 
-**Ver detalles de directorios**
+_Ver detalles de directorios_
 df -h
 ```
 
