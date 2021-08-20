@@ -1,10 +1,30 @@
 ## Bienvenid@s a mi repositorio sobre el Curso de Sistemas Operativos
 
-### Estudiante Emily Obando Vargas
+#### Hecho por Emily Massielle Obando Vargas
 
-En este repo se sumarizan los comandos aprendidos divididos por las clases donde se aprendieron
+En este repositorio se sumarizan los comandos aprendidos divididos por las clases donde se aprendieron
 
-### Markdown
+### Semana 2
+```markdown
+**Para ver ruta en la que se encuentra**
+  pwd
+
+**Actualizar repositorios** 
+  apt-get update
+
+**Dar permisos de super usuario a cualquier comando**
+  sudo
+
+**Instalar software desde repositorios**
+  apt install
+  snap  ** tambien se puede usar
+
+**Limpiar terminal**
+  clear
+
+**Revisar posibilidades de comandos o software**
+  apt search
+```
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
