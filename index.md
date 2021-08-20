@@ -116,7 +116,7 @@ _Ver detalles de directorios_
 df -h
 ```
 
-#### Semana 7
+#### Semana 7 🖼️ 🔐
 ```markdown
 _Ver tamaño de archivo_
   du -h archivo.png
@@ -148,7 +148,7 @@ _Matar un proceso_
   kill -9 $PID
 ```
 
-#### Semana 9
+#### Semana 9 🎮 🐚 🧑‍⚖️ 📥
 ```markdown
 _Ver version de bash_
   bash --version
@@ -215,7 +215,7 @@ read variable
 
 ```
 
-#### Semana 10: Docker images
+#### Semana 10: Docker images 🧙 ✨
 ```markdown
 _Servidor de Software_
   docker pull store/gitlab/gitlab-ce:10.2.4-ce.0
@@ -247,7 +247,7 @@ _Ubuntu_
 
 ```
 
-#### Semana 11
+#### Semana 11 🛂 📚
 ```markdown
 _Ver contraseñas en linux_
   /etc/passwd
@@ -302,7 +302,9 @@ _Gestion de logs_
 
 ```
 
-#### Manjaro
+#### Manjaro 
+![GitHub Logo](/manjaro.PNG)
+Format: ![Alt Text](url)
 ```markdown
 _Actualizar repositorios_
 sudo pacman -Syuu
