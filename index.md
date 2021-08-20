@@ -1,8 +1,8 @@
 ## Bienvenid@s a mi repositorio sobre el Curso de Sistemas Operativos
 
-You can use the [editor on GitHub](https://github.com/eobandov001/Commands_sistOp.md/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# Estudiante Emily Obando Vargas
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+En este repo se sumarizan los comandos aprendidos divididos por las clases donde se aprendieron
 
 ### Markdown
 
