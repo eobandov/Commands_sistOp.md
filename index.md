@@ -17,7 +17,7 @@ En este repositorio se sumarizan los comandos aprendidos divididos por las clase
 
 **Instalar software desde repositorios**
   apt install
-  snap  ** tambien se puede usar
+  snap  `tambien se puede usar`
 
 **Limpiar terminal**
   clear
@@ -25,6 +25,68 @@ En este repositorio se sumarizan los comandos aprendidos divididos por las clase
 **Revisar posibilidades de comandos o software**
   apt search
 ```
+
+### Semana 3
+```markdown
+_Ver datos de red_
+ip addr
+
+_Ver IP de maquina_
+nmap [IP]
+
+_Hacer ping de alguna maquina_
+ping [IP]
+
+_Crear diirectorios_
+mkdir
+
+_Ver procesos, con parametro -aux se ven procesos activos_ 
+_Con top se ven procesos en tiempo real, es mas interactivo_
+ps -aux
+top
+pstree
+htop `debe instalarse`
+
+_Concatenar comandos_
+|
+
+_Buscar_
+grep 
+find 
+
+_Matar procesos_
+kill -9 [nombre]
+
+_Ver que usuario esta usando el sistema_
+whoami
+
+_Entrar como super usuario `root`_
+sudo su
+sudo -i
+su root
+
+_Establecer contraseñas_
+sudo passwd [usuario]
+
+_Crear archivos_
+touch
+
+_Editar archivos de texto_
+vim
+nano
+
+_Enlistar lo que contiene el directorio actual_
+ls -l
+
+_Mostrar contenido del archivo_
+cat 
+more
+less
+
+_Ver usuarios y sus datos_
+cat /etc/passwd
+```
+
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
