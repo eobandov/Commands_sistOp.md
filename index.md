@@ -87,6 +87,7 @@ less
 _Ver usuarios y sus datos_
 cat /etc/passwd
 ```
+
 #### Semana 6 🧠 📑
 ```markdown
 _Ver datos de la memoria_
@@ -115,31 +116,232 @@ _Ver detalles de directorios_
 df -h
 ```
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+#### Semana 7
 ```markdown
-Syntax highlighted code block
+_Ver tamaño de archivo_
+  du -h archivo.png
 
-# Header 1
-## Header 2
-### Header 3
+_Ver fecha de creación, último acceso_
+  stat archivo.png
 
-- Bulleted
-- List
+_Tipo de archivo_
+  file archivo.png
+  
+_Propietario y grupo, lista de permisos. Cambio de propietario, otorgar permisos_
+  chown user1 archivo.png
+  chmod 777 archivo.png 
+  
+_Mostrar el espacio en disco usado_ 
+  df -h
+  
+_Mount: Montaje de dispositivos en el sistema de archivos_
+  /etc/fstab 
+  mount /dev/cdrom /mnt
 
-1. Numbered
-2. List
+_Gparted: Administra las particiones_
+  sudo apt install gparted
+  
+_gnome-disk-utility: Muestra información sobre el disco_
+  sudo apt install gnome-disk-utility
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+_Matar un proceso_
+  kill -9 $PID
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+#### Semana 9
+```markdown
+_Ver version de bash_
+  bash --version
 
-### Jekyll Themes
+_Ver ubicación de los intérpretes_ 
+  echo $SHELL
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/eobandov001/Commands_sistOp.md/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+_Ver todos los shells instalados_
+  cat /etc/shells
+ 
+_Cambiar bash a ksh_
+  chsh -s /bin/zsh 
+
+_Ejecutarlo scripts_
+./script.sh
+bash script.sh
+
+_Imprimir_
+echo
+
+_Inicio de scripts en bash: `shebang`_
+#!/bin/bash
+
+_Dar permisos de ejecutar a scripts_
+chmod +x script.sh
+chmod 755 script.sh
+
+_Declarar variables y asignarles un valor_
+NAME=$(hostname)
+
+_Debugg_
+~/scripts> bash -x script.sh 
+
+_Instalar paquetes_
+dpkg -t [nombre]
+
+_Formato basico de programacion en bash_
+**if** [ condicion ];
+then
+ accion1
+else
+ accion2
+fi
+
+**for** i in variable
+do
+ accion1 $i
+done
+
+**while** [ variable ]
+do
+  accion1
+  accion2
+done
+
+**function** F1()
+{
+accion1
+}
+F1
+
+_Entrada de usuario_
+read variable
+
+```
+
+#### Semana 10: Docker images
+```markdown
+_Servidor de Software_
+  docker pull store/gitlab/gitlab-ce:10.2.4-ce.0
+
+_Servidor DHCP_
+  docker pull sw4iot/isc-dhcp
+  docker pull gartz/simple-dns
+
+_Servidor SSH, FTP, SAMBA_
+  docker pull itsthenetwork/nfs-server-alpine
+  docker pull stanback/alpine-samba
+
+_Servidor FTP y Servidor Web_
+  docker pull stilliard/pure-ftpd
+  docker pull inwt/r-shiny
+
+_Servidor de Respaldos_
+  docker pull nextcloud
+
+_Servidor Proxy_
+  docker pull minimum2scp/squid
+
+_Servidor de Logs_
+  docker pull splunk/splunk 
+_Kali Linux_
+  docker pull kalilinux/kali-linux-docker
+_Ubuntu_
+  docker pull ubuntu
+
+```
+
+#### Semana 11
+```markdown
+_Ver contraseñas en linux_
+  /etc/passwd
+  /etc/shadow
+  sudo passwd root
+  
+_Ver contraseñas en windows_
+  lsadump::sam sam3.hiv system.hiv
+  `revisar editor de registro HKEY LOCAL MACHINE SAM export`
+  
+_Cracking Hashes_
+  john --show passwords.txt
+  cat hashes.txt
+
+_Ver version de GUI de nmap_
+  zenmap
+
+_uso de firewall_
+  sudo apt-get install iptables
+  sudo iptables -L -v
+  sudo iptables -A INPUT -p tcp --dport [numero de puerto] ACCEPT
+  sudo iptables -A INPUT -j DROP
+  sudo iptables -A INPUT -s [IP] -j ACCEPT
+  sudo iptables -A INPUT -s [IP] -j DROP
+
+_Descargar ICMP /Broadcast_
+/etc/sysctl.conf
+net.ipv4.icmp_echo_ignore_all = 1
+net.ipv4.icmp_echo_ignore_broadcasts = 1
+sysctl -p
+
+_Ejecucion de parches_
+sudo apt update / sudo ap upgrade
+sudo pacman -Syuu
+yum -y update
+`Windows Update`
+
+_Gestion de logs_
+/var/log/auth.log
+/var/log/message # Todos los logs disponibles del sistema 
+/var/log/auth.log # logs de autentificacion
+/var/log/kern.log # Logs del Kernel
+/var/log/cron.log # logs de crond 
+/var/log/maillog # logs del correo del servidor
+/var/log/boot.log # Logs de inicio del sistema
+/var/log/mysqld.log # Logs de MySQL 
+/var/log/apache/access.log # Logs de Apache
+/var/log/secure # logs de autentificacion
+/var/log/utmp # registro de inicios de sesion
+/var/log/wtmp 
+/var/log/yum.log # Log de Yum
+
+```
+
+#### Manjaro
+```markdown
+_Actualizar repositorios_
+sudo pacman -Syuu
+
+_Instalar zip_
+sudo pacman -S unrar zip unzip p7zip gzip bzip2
+
+_Instalar repositorio AUR_
+sudo pacman -S yay
+sudo yay -S --needed base-devel
+
+_Agregar usuarios_
+sudo useradd -m nombredeusuario -G wheel -p passworddelusuario
+
+_Eliminar subdirectorios_
+rmdir
+
+_Eliminar archivos_
+rm
+
+_Ver historial de comandos escritos en la terminal_
+history
+
+_Ver número de inodo_
+ls -li archivo.txt
+
+_Crear el enlace duro_
+ln prueba.txt nuevaRutaArchivo
+
+_Crear enlace simbólico_
+ln -s ruta/prueba.txt nuevaRuta/prueba2 
+
+_Para acceder a contrab_
+contrab -e
+
+_`Así se ve el formato dentro del archivo crontab`_
+m h dom mon dow user command 
+```
+
 
 ### Support or Contact
 
