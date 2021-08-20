@@ -1,11 +1,11 @@
-## 🌟 Bienvenid@s a mi repositorio sobre el Curso de Sistemas Operativos 🌟
+### Bienvenid@s a mi repositorio sobre comandos aprendidos en el Curso de Sistemas Operativos 🌟
 
 
-#### ✨ Hecho por Emily Massielle Obando Vargas ✨
+##### ✨ Hecho por Emily Massielle Obando Vargas ✨
 
 En este repositorio se sumarizan los comandos aprendidos divididos por las clases donde se aprendieron
 
-### Semana 2 🔥
+#### Semana 2 🔥
 ```markdown
 **- Para ver ruta en la que se encuentra**
   pwd
@@ -27,7 +27,7 @@ En este repositorio se sumarizan los comandos aprendidos divididos por las clase
   apt search
 ```
 
-### Semana 3 🎆
+#### Semana 3 🎆
 ```markdown
 _- Ver datos de red_
 ip addr
