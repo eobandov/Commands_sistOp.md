@@ -303,8 +303,9 @@ _Gestion de logs_
 ```
 
 #### Manjaro 
+`Traducción: Manjaro es una palabra swahili que significa "No puedo configurar Arch".`
 ![GitHub Logo](/manjaro.PNG)
-Format: ![Alt Text](url)
+
 ```markdown
 _Actualizar repositorios_
 sudo pacman -Syuu
@@ -345,6 +346,6 @@ m h dom mon dow user command
 ```
 
 
-### Support or Contact
+### Suporte o contacto
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Teniendo problemas con Paginas? Revisa la documentación [documentation](https://docs.github.com/categories/github-pages-basics/) o [contact support](https://support.github.com/contact) y te ayudaremos a solucionarlo.
