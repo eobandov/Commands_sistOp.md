@@ -401,7 +401,29 @@ contrab -e
 _`Así se ve el formato dentro del archivo crontab`_
 m h dom mon dow user command 
 ```
+#### Otros que encontramos haciendo el proyecto final o no sé como llegué a conocer 
+```markdown
+_Agregar usuarios_
+  sudo useradd
 
+_Sobre el firewall ufw_
+  ufw app list
+  ufw allow [nombre:puerto]
+  ufw enable
+  ufw status
+
+_Ver estado de un servicio, en este caso vsftpd, un servicio de FTP_
+  systemctl status vsftpd
+
+_Ver version de sql, php_
+  sudo mysql
+  php -v
+
+_Mover carpetas o archivos_
+  mv
+  
+_Y agregando..._
+```
 
 ### Soporte o contacto
 
