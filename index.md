@@ -5,89 +5,115 @@
 
 En este repositorio se sumarizan los comandos aprendidos divididos por las clases donde se aprendieron
 
-#### Semana 2 🔥
+#### Semana 2 🗺️ 🥽
 ```markdown
-**- Para ver ruta en la que se encuentra**
+**Para ver ruta en la que se encuentra**
   pwd
 
-**- Actualizar repositorios** 
+**Actualizar repositorios** 
   apt-get update
 
-**- Dar permisos de super usuario a cualquier comando**
+**Dar permisos de super usuario a cualquier comando**
   sudo
 
-**- Instalar software desde repositorios**
+**Instalar software desde repositorios**
   apt install
   snap  `tambien se puede usar`
 
-**- Limpiar terminal**
+**Limpiar terminal**
   clear
 
 **Revisar posibilidades de comandos o software**
   apt search
 ```
 
-#### Semana 3 🎆
+#### Semana 3 🥅 🌳 🔪 🐈
 ```markdown
-_- Ver datos de red_
+_Ver datos de red_
 ip addr
 
-_- Ver IP de maquina_
+_Ver IP de maquina_
 nmap [IP]
 
-_- Hacer ping de alguna maquina_
+_Hacer ping de alguna maquina_
 ping [IP]
 
-_- Crear diirectorios_
+_Crear directorios_
 mkdir
 
-_- Ver procesos, con parametro -aux se ven procesos activos_ 
+_Ver procesos, con parametro -aux se ven procesos activos_ 
 _Con top se ven procesos en tiempo real, es mas interactivo_
 ps -aux
 top
 pstree
 htop `debe instalarse`
 
-_- Concatenar comandos_
+_Concatenar comandos_
 |
 
-_- Buscar_
+_Buscar_
 grep 
 find 
 
-_- Matar procesos_
+_Matar procesos_
 kill -9 [nombre]
 
-_- Ver que usuario esta usando el sistema_
+_Ver que usuario esta usando el sistema_
 whoami
 
-_- Entrar como super usuario `root`_
+_Entrar como super usuario `root`_
 sudo su
 sudo -i
 su root
 
-_- Establecer contraseñas_
+_Establecer contraseñas_
 sudo passwd [usuario]
 
-_- Crear archivos_
+_Crear archivos_
 touch
 
-_- Editar archivos de texto_
+_Editar archivos de texto_
 vim
 nano
 
-_- Enlistar lo que contiene el directorio actual_
+_Enlistar lo que contiene el directorio actual_
 ls -l
 
-_- Mostrar contenido del archivo_
+_Mostrar contenido del archivo_
 cat 
 more
 less
 
-_- Ver usuarios y sus datos_
+_Ver usuarios y sus datos_
 cat /etc/passwd
 ```
+#### Semana 6 🧠 📑
+```markdown
+**Ver datos de la memoria**
+  sudo dmidecode --type 17
+  cat/proc/meminfo
 
+**Recorrer procesos actuales y leer cuantos KB/s usa cada uno**
+  for file in /proc/*/status ; do awk '/VmSwap|Name/{printf $2 " " $3}END{ print ""}' $file; done | sort -k 2 -n -r | less
+
+**Comando para leer memoria disponible**
+  free -h
+
+**Comando para dar prioridad a la memoria swap**
+  swapon
+
+**Comando Swampiness: editar # de cuanto porcentaje de memoria usa en RAM**
+  cat /proc/sys/vm/swappiness
+  
+**Crear un disco de memoria RAM**
+sudo mkdir /mnt/ram_disk
+
+**Montar un sistema de archivos usando RAM**
+sudo mount -t tmpfs -o size=1024m new_ram_disk /mnt/ram_disk
+
+**Ver detalles de directorios**
+df -h
+```
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
