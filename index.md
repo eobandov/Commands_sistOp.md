@@ -1,6 +1,6 @@
 ## Bienvenid@s a mi repositorio sobre el Curso de Sistemas Operativos
 
-# Estudiante Emily Obando Vargas
+### Estudiante Emily Obando Vargas
 
 En este repo se sumarizan los comandos aprendidos divididos por las clases donde se aprendieron
 
